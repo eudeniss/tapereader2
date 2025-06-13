@@ -1,0 +1,28 @@
+risk:
+  max_daily_loss: 1000.0
+  max_positions: 3
+  position_size_base: 1
+  stop_loss_ticks: 10
+  take_profit_ticks: 20
+strategies:
+  exhaustion_reversal:
+    enabled: true
+    min_confidence: 0.75
+    required_behaviors:
+    - exhaustion
+    - divergence
+    risk_reward: 1.5
+  institutional_follow:
+    enabled: true
+    min_confidence: 0.8
+    required_behaviors:
+    - institutional
+    - absorption
+    risk_reward: 2.5
+  momentum_breakout:
+    enabled: true
+    min_confidence: 0.7
+    required_behaviors:
+    - momentum
+    - breakout
+    risk_reward: 2.0

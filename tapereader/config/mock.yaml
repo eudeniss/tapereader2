@@ -1,0 +1,11 @@
+mock:
+  enabled: true
+  price_base:
+    DOLFUT: 5000.0
+    WDOFUT: 5000.0
+  tick_interval: 0.5
+  trend_bias: 0.6
+  volatility: 0.0002
+  volume_range:
+  - 100
+  - 5000

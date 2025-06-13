@@ -1,0 +1,34 @@
+excel:
+  batch_size: 50
+  file_path: C:\Users\DNTX3\Desktop\projeto_tapeReading\tape_reader_final\rtd_tapeReading.xlsx
+  sheet_name: Sheet1
+  update_interval: 100
+  ranges:
+    wdofut_trades:
+      data: "B"
+      agressao: "C"
+      valor: "D"
+      quantidade: "E"
+      start_row: 4
+      max_rows: 100
+    dolfut_trades:
+      data: "H"
+      agressao: "I"
+      valor: "J"
+      quantidade: "K"
+      start_row: 4
+      max_rows: 100
+    wdofut_book:
+      qtde_compra: "N"
+      compra: "O"
+      venda: "P"
+      qtde_venda: "Q"
+      start_row: 4
+      max_rows: 30    # ALTERADO de 20 para 30 (evita linhas problemáticas)
+    dolfut_book:
+      qtde_compra: "T"
+      compra: "U"
+      venda: "V"
+      qtde_venda: "W"
+      start_row: 4
+      max_rows: 30    # ALTERADO de 20 para 30 (por consistência)

@@ -1,0 +1,45 @@
+application:
+  log_level: INFO
+  mode: production
+  name: TapeReader Professional
+  version: 2.0.0
+
+paths:
+  backup: C:\Users\DNTX3\Desktop\projeto_tapeReading\tape_reader_final\data\backups
+  base: C:\Users\DNTX3\Desktop\projeto_tapeReading\tape_reader_final
+  cache: C:\Users\DNTX3\Desktop\projeto_tapeReading\tape_reader_final\data\cache
+  data: C:\Users\DNTX3\Desktop\projeto_tapeReading\tape_reader_final\data
+  logs: C:\Users\DNTX3\Desktop\projeto_tapeReading\tape_reader_final\logs
+
+# Configurações do banco de dados
+database:
+  path: C:\Users\DNTX3\Desktop\projeto_tapeReading\tape_reader_final\data\tape_reader.db
+  save_interval: 10  # Salva a cada 10 trades
+  save_book_snapshots: true
+  validate_trades: true
+  
+  # Configurações de retenção de dados
+  retention:
+    trades_days: 30  # Mantém trades por 30 dias
+    book_snapshots_days: 7  # Mantém snapshots por 7 dias
+    validation_logs_days: 7  # Mantém logs de validação por 7 dias
+
+# Define onde encontrar os outros ficheiros de configuração
+data:
+  excel:
+    config_path: excel.yaml
+
+strategies:
+  config_path: strategies.yaml
+
+behaviors:
+  config_path: behaviors.yaml
+
+mock:
+  config_path: mock.yaml
+
+features:
+  auto_backup: true
+  hot_reload: true
+  performance_tracking: true
+  database_persistence: true  # Nova feature habilitada
